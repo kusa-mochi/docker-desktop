@@ -1,0 +1,11 @@
+version: "3.8"
+services: 
+  app:
+    command: /bin/bash
+    container_name: vue-cli
+    image: whoatemyapplepie/vue-cli:0.1.0
+    ports:
+      - 8080:8080
+    volumes:
+      - ${PWD}:/app
+    tty: true
