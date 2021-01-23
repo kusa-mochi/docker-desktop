@@ -1,11 +1,16 @@
-#containers {
-    .el-table__fixed-body-wrapper {
-        top: 48px !important;
-    }
-}
-
+#containers,
 #images {
+    .el-table__fixed-right-patch {
+        top: -23px !important;
+    }
+    .el-table__body-wrapper {
+        height: 452px !important;
+    }
+    .el-table__fixed-right {
+        height: 500px !important;
+    }
     .el-table__fixed-body-wrapper {
         top: 48px !important;
+        height: 450px !important;
     }
 }
