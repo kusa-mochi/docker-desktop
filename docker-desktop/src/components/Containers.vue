@@ -1,15 +1,20 @@
 <template>
   <div id="containers">
-    <el-table
-      :data="tableData"
-      height="250"
-      :show-header="false"
-      style="width: 100%"
-    >
-      <el-table-column prop="imageName" width="180"> </el-table-column>
-      <el-table-column prop="imageId" width="180"> </el-table-column>
-      <el-table-column :prop="`${repository}:${tag}`"> </el-table-column>
-      <el-table-column prop="size"></el-table-column>
+    <el-table :data="tableData" height="500">
+      <el-table-column label="Container ID" prop="containerId">
+      </el-table-column>
+      <el-table-column label="Image" prop="image"></el-table-column>
+      <el-table-column label="Name" prop="containerName"></el-table-column>
+      <el-table-column fixed="right" label="Operations" width="112">
+        <template>
+          <el-button
+            type="primary"
+            icon="el-icon-caret-right"
+            circle
+          ></el-button>
+          <el-button type="info" icon="el-icon-delete" circle></el-button>
+        </template>
+      </el-table-column>
     </el-table>
   </div>
 </template>
@@ -20,151 +25,74 @@ export default {
     return {
       tableData: [
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         },
         {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
-        },
-        {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
-        },
-        {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
-        },
-        {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
-        },
-        {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
-        },
-        {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
-        },
-        {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
-        },
-        {
-          imageId: "f643c72bc252",
-          imageName: "2016-05-03",
-          repository: "ubuntu",
-          size: "72.9MB",
-          tag: "20.04"
+          containerId: "f643c72bc252",
+          image: "abcde/ubuntu:20.04",
+          containerName: "my-container"
         }
       ]
     };
@@ -173,7 +101,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-#containers {
-}
-</style>
+<style lang="scss" scoped></style>
