@@ -2,13 +2,22 @@
   <div id="images">
     <el-table
       :data="tableData"
-      height="250"
-      :show-header="false"
-      style="width: 100%"
+      height="500"
     >
-      <el-table-column prop="date" width="180"> </el-table-column>
-      <el-table-column prop="name" width="180"> </el-table-column>
-      <el-table-column prop="address"> </el-table-column>
+    <el-table-column label="Repository" prop="repository"></el-table-column>
+    <el-table-column label="Tag" prop="tag"></el-table-column>
+    <el-table-column label="ID" prop="id"></el-table-column>
+    <el-table-column label="Size" prop="size"></el-table-column>
+    <el-table-column fixed="right" label="Operations" width="112">
+        <template>
+          <el-button
+            type="primary"
+            icon="el-icon-caret-right"
+            circle
+          ></el-button>
+          <el-button type="info" icon="el-icon-delete" circle></el-button>
+        </template>
+      </el-table-column>
     </el-table>
   </div>
 </template>
@@ -19,39 +28,94 @@ export default {
     return {
       tableData: [
         {
-          date: "2016-05-03",
-          name: "Tom",
-          address: "No. 189, Grove St, Los Angeles"
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
         },
         {
-          date: "2016-05-02",
-          name: "Tom",
-          address: "No. 189, Grove St, Los Angeles"
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
         },
         {
-          date: "2016-05-04",
-          name: "Tom",
-          address: "No. 189, Grove St, Los Angeles"
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
         },
         {
-          date: "2016-05-01",
-          name: "Tom",
-          address: "No. 189, Grove St, Los Angeles"
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
         },
         {
-          date: "2016-05-08",
-          name: "Tom",
-          address: "No. 189, Grove St, Los Angeles"
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
         },
         {
-          date: "2016-05-06",
-          name: "Tom",
-          address: "No. 189, Grove St, Los Angeles"
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
         },
         {
-          date: "2016-05-07",
-          name: "Tom",
-          address: "No. 189, Grove St, Los Angeles"
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
+        },
+        {
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
+        },
+        {
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
+        },
+        {
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
+        },
+        {
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
+        },
+        {
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
+        },
+        {
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
+        },
+        {
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
+        },
+        {
+          repository: "ubuntu",
+          tag: "20.04",
+          id: "f643c72bc252",
+          size: "72.9MB"
         }
       ]
     };
