@@ -1,6 +1,6 @@
 "use strict";
 
-import { app, protocol, BrowserWindow } from "electron";
+import { app, protocol, BrowserWindow, ipcMain } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
 const isDevelopment = process.env.NODE_ENV !== "production";
@@ -79,3 +79,19 @@ if (isDevelopment) {
     });
   }
 }
+
+ipcMain.handle("do-command-as-general-user", async (event, command) => {
+  const util = require("util");
+  const exec = util.promisify(require("child_process").exec);
+  const ret = await exec(command, { name: "Electron" });
+  if (ret.error) return ret.error;
+  return ret.stdout;
+});
+
+ipcMain.handle("do-command-as-sudo", async (event, command) => {
+  const util = require("util");
+  const exec = util.promisify(require("sudo-prompt").exec);
+  const ret = await exec(command, { name: "Electron" });
+  if (ret.error) return ret.error;
+  return ret.stdout;
+});
